@@ -1,0 +1,10 @@
+h8write (h8write.c)
+http://mes.sourceforge.jp/h8/writer-j.html
+
+/*******************************************/
+/* EEPROM write program to H8/300H         */
+/*        Copyleft Yukio Mituiwa,2002      */
+/* License is GPL2                         */
+/* 	Update 2002,Dec,30 Satoshi Okubo   */
+/* 	Update 2003,Jan,1  Yukio Mituiwa   */
+/*******************************************/
