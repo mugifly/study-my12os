@@ -18,3 +18,7 @@
 
 # Others
 binutils-*/
+gcc-*/
+vendor/h8write/h8write
+*.sublime-project
+*.sublime-workspace
