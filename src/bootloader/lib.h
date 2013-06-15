@@ -34,4 +34,7 @@ int strcmp(const char *s1, const char *s2);
 /* Compare the string (with specified length) */
 int strncmp(const char *s1, const char *s2, int len);
 
+/* Function to transmit a value with HEX. (column = number of digit) */
+int putxval(unsigned long value, int column);
+
 #endif

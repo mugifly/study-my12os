@@ -82,3 +82,30 @@ int strncmp(const char *s1, const char *s2, int len) {
 	}
 	return 0;
 }
+
+int putxval(unsigned long value, int column) {
+	char buf[9];
+	char *p;
+	
+	p = buf + sizeof(buf) - 1;
+	*(p--) = '\0';
+
+	if (!value && !column) {
+		column++;
+	}
+
+	while (value || column) {
+		/* Convert to HEX, and into the buffer */
+		*(p--) = "0123456789abcdef" [value & 0xf];
+		/* Next digit */
+		value >>= 4;
+		if (column) {
+			column--;
+		}
+	}
+
+	/* Output from the buffer */
+	puts(p + 1);
+
+	return 0;
+}
