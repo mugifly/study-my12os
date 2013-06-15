@@ -12,6 +12,8 @@
 *.dylib
 
 # Executables
+kzload
+*.elf
 *.exe
 *.out
 *.app

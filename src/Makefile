@@ -4,7 +4,7 @@ BINDIR	=	$(PREFIX)/bin
 ADDNAME	=	$(ARCH)-
 
 # Definition of tools
-AR		=	$(BINDIR)/$(ADDNAME)AR
+AR		=	$(BINDIR)/$(ADDNAME)ar
 AS		=	$(BINDIR)/$(ADDNAME)as
 CC		=	$(BINDIR)/$(ADDNAME)gcc
 LD		=	$(BINDIR)/$(ADDNAME)ld
