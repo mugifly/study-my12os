@@ -13,7 +13,8 @@ OBJCOPY	=	$(BINDIR)/$(ADDNAME)objcopy
 OBJDUMP	=	$(BINDIR)/$(ADDNAME)objdump
 RANLIB	=	$(BINDIR)/$(ADDNAME)ranlib
 STRIP	=	$(BINDIR)/$(ADDNAME)strip
-H8WRITE	=	../vendor/h8write/kz_h8write
+H8WRITE	=	../vendor/h8write/h8write
+#H8WRITE	=	../vendor/h8write/kz_h8write
 
 # Definition of serial-port name
 # Linux: /dev/ttySx, Linux(USB):/dev/ttyUSBx, Windows: comX

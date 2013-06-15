@@ -13,6 +13,7 @@
 
 # Executables
 kzload
+*.mot
 *.elf
 *.exe
 *.out
