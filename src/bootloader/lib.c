@@ -15,3 +15,32 @@ int puts(unsigned char *str) {
 	}
 	return 0;
 }
+
+void *memset(void *b, int c, long len) {
+	char *p;
+	for (p = b; len > 0; len--) {
+		*(p++) = c;
+	}
+	return b;
+}
+
+void *memcpy(void *dst, const void *src, long len) {
+	char *d = dst;
+	const char *s = src;
+	for (; len > 0; len--) {
+		*(d++) = *(s++);
+	}
+	return dst;
+}
+
+int memcmp(const void *b1, const void *b2, long len) {
+	const char *p1 = b1, *p2 = b2;
+	for (; len > 0; len--) {
+		if (*p1 != *p2){
+			return (*p1 > *p2) ? 1: -1;
+		}
+		p1++;
+		p2++;
+	}
+	return 0;
+}
