@@ -89,7 +89,7 @@ int serial_is_send_enable(int index) {
 }
 
 /* Function to transmit single character */
-int serial_send_byte(int index, unsigned char b) {
+int serial_send_byte(int index, unsigned char c) {
 	volatile struct h8_3069f_sci *sci = regs[index].sci;
 
 	/* Wait until become able to transmit */

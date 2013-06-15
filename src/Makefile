@@ -1,6 +1,6 @@
 PREFIX	=	/usr/local
 ARCH	=	h8300-elf
-BINDIR	=	$(PREFIX)/BINDIR
+BINDIR	=	$(PREFIX)/bin
 ADDNAME	=	$(ARCH)-
 
 # Definition of tools
@@ -13,11 +13,11 @@ OBJCOPY	=	$(BINDIR)/$(ADDNAME)objcopy
 OBJDUMP	=	$(BINDIR)/$(ADDNAME)objdump
 RANLIB	=	$(BINDIR)/$(ADDNAME)ranlib
 STRIP	=	$(BINDIR)/$(ADDNAME)strip
-H8WRITE	=	../vendor/h8write/h8write
+H8WRITE	=	../vendor/h8write/kz_h8write
 
 # Definition of serial-port name
 # Linux: /dev/ttySx, Linux(USB):/dev/ttyUSBx, Windows: comX
-H8WRITE_SERDEV = /dev/cuad0
+H8WRITE_SERDEV = /dev/ttyUSB0
 
 # Definition of source files
 OBJS = vector.o startup.o main.o
@@ -72,4 +72,5 @@ write			:	$(TARGET).mot
 					$(H8WRITE) -3069 -f20 $(TARGET).mot $(H8WRITE_SERDEV)
 
 # Clean up the directory
-clean			:	rm -f $(OBJS) $(TARGET) $(TARGET).elf $(TARGET).mot
+clean			:	
+				rm -f $(OBJS) $(TARGET) $(TARGET).elf $(TARGET).mot
